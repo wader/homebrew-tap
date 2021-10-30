@@ -5,34 +5,45 @@
 class Fq < Formula
   desc "jq for binaries"
   homepage "https://github.com/wader/fq"
-  version "0.0.3"
+  version "0.0.1"
   license "MIT"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/wader/fq/releases/download/v0.0.3/fq_0.0.3_macos_amd64.tar.gz"
-      sha256 "3f1caa6b422c36961112a4dec5da56eeeb84d81ca97803d7751f992433a9e1b9"
+      url "https://github.com/wader/fq/releases/download/v0.0.1/fq_0.0.1_macos_amd64.tar.gz"
+      sha256 "6168e5180288861461f641f6792d1c8bc71e63383a51b23e6c8a3daf6b3def48"
+
+      def install
+        bin.install "fq"
+      end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/wader/fq/releases/download/v0.0.3/fq_0.0.3_macos_arm64.tar.gz"
-      sha256 "4f8b4f8ab5705a96a382b1585b9849ef38a20836e9a03805b7d74fc18f948984"
+      url "https://github.com/wader/fq/releases/download/v0.0.1/fq_0.0.1_macos_arm64.tar.gz"
+      sha256 "c38201f060cb20078305764763189cff7e3c05376c35650766bf57ab7ae9a9f5"
+
+      def install
+        bin.install "fq"
+      end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/wader/fq/releases/download/v0.0.3/fq_0.0.3_linux_amd64.tar.gz"
-      sha256 "acdfa86ace8831f902e405156a3c16256134d5894a23fbb43445d3da9630b0ef"
+      url "https://github.com/wader/fq/releases/download/v0.0.1/fq_0.0.1_linux_amd64.tar.gz"
+      sha256 "181befed545536f186834dd43af9d9c455ba774b0e49fadf77e8ec1c19c6b4d4"
+
+      def install
+        bin.install "fq"
+      end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wader/fq/releases/download/v0.0.3/fq_0.0.3_linux_arm64.tar.gz"
-      sha256 "ee74177b2bf1cb4b0f684777b28b2f6537361bd4dc9bbf7387f966d9a7c9aac4"
-    end
-  end
+      url "https://github.com/wader/fq/releases/download/v0.0.1/fq_0.0.1_linux_arm64.tar.gz"
+      sha256 "b8946f704beadda1722ac0f3eb3dc611f591057dbb49798d8c61437720177195"
 
-  def install
-    bin.install "fq"
+      def install
+        bin.install "fq"
+      end
+    end
   end
 
   test do
