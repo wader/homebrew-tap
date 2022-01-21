@@ -5,21 +5,21 @@
 class Fq < Formula
   desc "jq for binaries"
   homepage "https://github.com/wader/fq"
-  version "0.0.3"
+  version "0.0.4-rc1"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/wader/fq/releases/download/v0.0.3/fq_0.0.3_macos_arm64.tar.gz"
-      sha256 "c537cb61dab24348ea0da068f325dfc44efa0a3036a2755ecf3f54127a237036"
+    if Hardware::CPU.intel?
+      url "https://github.com/wader/fq/releases/download/v0.0.4-rc1/fq_0.0.4-rc1_macos_amd64.tar.gz"
+      sha256 "e5106bb53e0e1948c4a191c14a25b0e479b4616ae6794eea2d5b5968bca6d797"
 
       def install
         bin.install "fq"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/wader/fq/releases/download/v0.0.3/fq_0.0.3_macos_amd64.tar.gz"
-      sha256 "34e58785355fb0957136a7a0d5003efd2e29d722ff07864e37a10fb1161844c0"
+    if Hardware::CPU.arm?
+      url "https://github.com/wader/fq/releases/download/v0.0.4-rc1/fq_0.0.4-rc1_macos_arm64.tar.gz"
+      sha256 "329a8071b84a626f2b292dcd79221b75709c26dd805452b87600ec3a7f74639b"
 
       def install
         bin.install "fq"
@@ -28,17 +28,17 @@ class Fq < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/wader/fq/releases/download/v0.0.3/fq_0.0.3_linux_amd64.tar.gz"
-      sha256 "ec06885ddad6093aedb268f901c6298371933ce238272c9eeee134ca1dd7e370"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/wader/fq/releases/download/v0.0.4-rc1/fq_0.0.4-rc1_linux_arm64.tar.gz"
+      sha256 "ed2e0f3729ea8899a459998ed57c77766992a843139cf573ed8a44936c20b5e9"
 
       def install
         bin.install "fq"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wader/fq/releases/download/v0.0.3/fq_0.0.3_linux_arm64.tar.gz"
-      sha256 "180f41509ce7714d51878eb48766057e02dcf34959afd92235f41ec1a4901065"
+    if Hardware::CPU.intel?
+      url "https://github.com/wader/fq/releases/download/v0.0.4-rc1/fq_0.0.4-rc1_linux_amd64.tar.gz"
+      sha256 "fce557760a6ff19aa777572fb34a3eef3419d0d043554524661647855fe5762e"
 
       def install
         bin.install "fq"
