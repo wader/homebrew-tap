@@ -5,21 +5,21 @@
 class Fq < Formula
   desc "jq for binary formats"
   homepage "https://github.com/wader/fq"
-  version "0.7.0"
+  version "0.8.0"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/wader/fq/releases/download/v0.7.0/fq_0.7.0_macos_arm64.zip"
-      sha256 "ee653350df6a3625898976f9a9d4726b13997c2ea466480671f007caaf40cb83"
+    if Hardware::CPU.intel?
+      url "https://github.com/wader/fq/releases/download/v0.8.0/fq_0.8.0_macos_amd64.zip"
+      sha256 "93434e1e9c0749478d83d08fbeb38bd54d3329d7100cbf528cdf4eaf127a2afc"
 
       def install
         bin.install "fq"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/wader/fq/releases/download/v0.7.0/fq_0.7.0_macos_amd64.zip"
-      sha256 "ac66df5dbd585997d46d68c74e30220928dc12c994ec1679388421181844d372"
+    if Hardware::CPU.arm?
+      url "https://github.com/wader/fq/releases/download/v0.8.0/fq_0.8.0_macos_arm64.zip"
+      sha256 "ba0cf92e886d5d9db7c06aa8e19aadb3de5951dda73f420ea2daaa92a4b442b8"
 
       def install
         bin.install "fq"
@@ -29,16 +29,16 @@ class Fq < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wader/fq/releases/download/v0.7.0/fq_0.7.0_linux_arm64.tar.gz"
-      sha256 "abc0e39e242274b4a7a32e6ef7eb924ee6a9096f0a70e3e64bdfcfb9570fe207"
+      url "https://github.com/wader/fq/releases/download/v0.8.0/fq_0.8.0_linux_arm64.tar.gz"
+      sha256 "8ce855bafb6efc89610ce2f54db0f81948b99ad6823d06a0f500ad6fa493f8f5"
 
       def install
         bin.install "fq"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/wader/fq/releases/download/v0.7.0/fq_0.7.0_linux_amd64.tar.gz"
-      sha256 "71bae121a6e68d443eec0a929357256f6d17f95e67945e5ca8486261aba886fa"
+      url "https://github.com/wader/fq/releases/download/v0.8.0/fq_0.8.0_linux_amd64.tar.gz"
+      sha256 "84383dca19c3973e5e7eb2d9ecd8dc8d58dccd63079bb089ebecf4df76c15d5b"
 
       def install
         bin.install "fq"
