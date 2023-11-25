@@ -5,21 +5,21 @@
 class Fq < Formula
   desc "jq for binary formats"
   homepage "https://github.com/wader/fq"
-  version "0.8.0"
+  version "0.9.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/wader/fq/releases/download/v0.8.0/fq_0.8.0_macos_amd64.zip"
-      sha256 "93434e1e9c0749478d83d08fbeb38bd54d3329d7100cbf528cdf4eaf127a2afc"
+      url "https://github.com/wader/fq/releases/download/v0.9.0/fq_0.9.0_macos_amd64.zip"
+      sha256 "08c39f8af69068c9bb77a4fb958348a7f7b69ac554bc215aaffe12af46c46cce"
 
       def install
         bin.install "fq"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/wader/fq/releases/download/v0.8.0/fq_0.8.0_macos_arm64.zip"
-      sha256 "ba0cf92e886d5d9db7c06aa8e19aadb3de5951dda73f420ea2daaa92a4b442b8"
+      url "https://github.com/wader/fq/releases/download/v0.9.0/fq_0.9.0_macos_arm64.zip"
+      sha256 "c572c573a94c4a6df7f9662ba06c1f86b5ea300ff4b5c6c49a4c5d7555e686a4"
 
       def install
         bin.install "fq"
@@ -29,16 +29,16 @@ class Fq < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wader/fq/releases/download/v0.8.0/fq_0.8.0_linux_arm64.tar.gz"
-      sha256 "8ce855bafb6efc89610ce2f54db0f81948b99ad6823d06a0f500ad6fa493f8f5"
+      url "https://github.com/wader/fq/releases/download/v0.9.0/fq_0.9.0_linux_arm64.tar.gz"
+      sha256 "2f9b3061dd79772978041bbe7daa704f22844574e7ff59171a1cbe2e2fa96bac"
 
       def install
         bin.install "fq"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/wader/fq/releases/download/v0.8.0/fq_0.8.0_linux_amd64.tar.gz"
-      sha256 "84383dca19c3973e5e7eb2d9ecd8dc8d58dccd63079bb089ebecf4df76c15d5b"
+      url "https://github.com/wader/fq/releases/download/v0.9.0/fq_0.9.0_linux_amd64.tar.gz"
+      sha256 "74301050d285921bfc3439ae8d0096596ac5aa7e91c818efc89142584a7ae742"
 
       def install
         bin.install "fq"
