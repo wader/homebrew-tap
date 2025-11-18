@@ -5,21 +5,21 @@
 class JqLsp < Formula
   desc "jq language server"
   homepage "https://github.com/wader/jq-lsp"
-  version "0.1.2"
+  version "0.1.14"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/wader/jq-lsp/releases/download/v0.1.2/jq-lsp_0.1.2_macos_arm64.zip"
-      sha256 "71a3d31a601ba3191da2b88316eb6a2b075ef4d27bc520a38a50f72c861e03c6"
+    on_intel do
+      url "https://github.com/wader/jq-lsp/releases/download/v0.1.14/jq-lsp_0.1.14_macos_amd64.zip"
+      sha256 "7de86266570f12c4c3ed96d3a23e3301639246b3fc6441b528ccb64e363901fa"
 
       def install
         bin.install "jq-lsp"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/wader/jq-lsp/releases/download/v0.1.2/jq-lsp_0.1.2_macos_amd64.zip"
-      sha256 "1b5f42841022db92d10ee6bfe98bd086158977d316ec2068c71b6f033bfe885a"
+    on_arm do
+      url "https://github.com/wader/jq-lsp/releases/download/v0.1.14/jq-lsp_0.1.14_macos_arm64.zip"
+      sha256 "46d9551e3c338c74ca57b8490f9340d25b046156f72b8c4ccb441ef6e205cbc7"
 
       def install
         bin.install "jq-lsp"
@@ -28,20 +28,24 @@ class JqLsp < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wader/jq-lsp/releases/download/v0.1.2/jq-lsp_0.1.2_linux_arm64.tar.gz"
-      sha256 "4f4d351f0dbc3c9171c27cd150cdbb5b0112b3b65037a01f43b25f358f1b70f8"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/wader/jq-lsp/releases/download/v0.1.14/jq-lsp_0.1.14_linux_amd64.tar.gz"
+        sha256 "c087017b898061216a08e0913fb2c0f2a7b45f138cf9ed6f2e1842f4ca72180c"
 
-      def install
-        bin.install "jq-lsp"
+        def install
+          bin.install "jq-lsp"
+        end
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/wader/jq-lsp/releases/download/v0.1.2/jq-lsp_0.1.2_linux_amd64.tar.gz"
-      sha256 "78a596856c1550f40e6c67cc4c86c33bbf86509fb54f252a2686b18dcaba4c77"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/wader/jq-lsp/releases/download/v0.1.14/jq-lsp_0.1.14_linux_arm64.tar.gz"
+        sha256 "e8002b8a52599ea0a679b47016fa0c7ec9e0ba3968e08f66b541d524094c7730"
 
-      def install
-        bin.install "jq-lsp"
+        def install
+          bin.install "jq-lsp"
+        end
       end
     end
   end
