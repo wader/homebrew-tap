@@ -11,7 +11,7 @@ class JqLsp < Formula
   on_macos do
     on_intel do
       url "https://github.com/wader/jq-lsp/releases/download/v0.1.14/jq-lsp_0.1.14_macos_amd64.zip"
-      sha256 "7de86266570f12c4c3ed96d3a23e3301639246b3fc6441b528ccb64e363901fa"
+      sha256 "f31d9d350769765d83b64b91fdd784f2b4704ca8a8ccd252ac8dea4d4caed862"
 
       def install
         bin.install "jq-lsp"
@@ -19,7 +19,7 @@ class JqLsp < Formula
     end
     on_arm do
       url "https://github.com/wader/jq-lsp/releases/download/v0.1.14/jq-lsp_0.1.14_macos_arm64.zip"
-      sha256 "46d9551e3c338c74ca57b8490f9340d25b046156f72b8c4ccb441ef6e205cbc7"
+      sha256 "a2a1baf5ce6230d14cc8655efcbb248f5a9815ff23c58849900c127ce2303317"
 
       def install
         bin.install "jq-lsp"
@@ -31,7 +31,7 @@ class JqLsp < Formula
     on_intel do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/wader/jq-lsp/releases/download/v0.1.14/jq-lsp_0.1.14_linux_amd64.tar.gz"
-        sha256 "c087017b898061216a08e0913fb2c0f2a7b45f138cf9ed6f2e1842f4ca72180c"
+        sha256 "412a9a5e8043ec5062d4c559ba1c7bf45f21fdb333029361d58e654353c723e1"
 
         def install
           bin.install "jq-lsp"
@@ -41,7 +41,7 @@ class JqLsp < Formula
     on_arm do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/wader/jq-lsp/releases/download/v0.1.14/jq-lsp_0.1.14_linux_arm64.tar.gz"
-        sha256 "e8002b8a52599ea0a679b47016fa0c7ec9e0ba3968e08f66b541d524094c7730"
+        sha256 "01d5f1a19d3057a150d6de45c2f816d90c8990cffd2a091c1f4ee595d3e2aecc"
 
         def install
           bin.install "jq-lsp"
