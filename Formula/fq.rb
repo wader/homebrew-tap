@@ -5,21 +5,21 @@
 class Fq < Formula
   desc "jq for binary formats"
   homepage "https://github.com/wader/fq"
-  version "0.15.1"
+  version "0.16.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/wader/fq/releases/download/v0.15.1/fq_0.15.1_macos_amd64.zip"
-      sha256 "186bcc2b84b90e6ff5b49ca2015f0c4ded7646e243fc9cb65d80690d818c5544"
+      url "https://github.com/wader/fq/releases/download/v0.16.0/fq_0.16.0_macos_amd64.zip"
+      sha256 "7126da1617ecf9ccfd279e8b8cd2b67ae82ba02409ecd4cc162ab27ec9c06910"
 
       def install
         bin.install "fq"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/wader/fq/releases/download/v0.15.1/fq_0.15.1_macos_arm64.zip"
-      sha256 "b7fae395469d045d026627a1d945771afad451748c0591c29f419e6bf3709d93"
+      url "https://github.com/wader/fq/releases/download/v0.16.0/fq_0.16.0_macos_arm64.zip"
+      sha256 "86884f625415e0105ccbd13ff97d22bffa91b97d67b87524dc94a3626930f3f7"
 
       def install
         bin.install "fq"
@@ -28,16 +28,16 @@ class Fq < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/wader/fq/releases/download/v0.15.1/fq_0.15.1_linux_amd64.tar.gz"
-      sha256 "07ee6b37ab36b290c6c5984122519d4d68052c5263192c5103ccd19403eb42d7"
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/wader/fq/releases/download/v0.16.0/fq_0.16.0_linux_amd64.tar.gz"
+      sha256 "417602f095df0da0b451f294e65e958d461bc3152e6434762d182755b350be70"
       def install
         bin.install "fq"
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/wader/fq/releases/download/v0.15.1/fq_0.15.1_linux_arm64.tar.gz"
-      sha256 "f0e403add93540781dd84cc5ebaf2105ab00ca7697abedd4094d8e59e6876b9b"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/wader/fq/releases/download/v0.16.0/fq_0.16.0_linux_arm64.tar.gz"
+      sha256 "d7d73fce62e0339f1344097a14a5fce7d5647fab31d3197fa903999ebc561ce7"
       def install
         bin.install "fq"
       end
