@@ -5,23 +5,23 @@
 class Fq < Formula
   desc "jq for binary formats"
   homepage "https://github.com/wader/fq"
-  version "0.16.0"
+  version "0.17.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/wader/fq/releases/download/v0.16.0/fq_0.16.0_macos_amd64.zip"
-      sha256 "7126da1617ecf9ccfd279e8b8cd2b67ae82ba02409ecd4cc162ab27ec9c06910"
+      url "https://github.com/wader/fq/releases/download/v0.17.0/fq_0.17.0_macos_amd64.zip"
+      sha256 "55221b37ad199005777f2e2b00528f2eb6f5cdb74e174a4230d24c6796d61ad8"
 
-      def install
+      define_method(:install) do
         bin.install "fq"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/wader/fq/releases/download/v0.16.0/fq_0.16.0_macos_arm64.zip"
-      sha256 "86884f625415e0105ccbd13ff97d22bffa91b97d67b87524dc94a3626930f3f7"
+      url "https://github.com/wader/fq/releases/download/v0.17.0/fq_0.17.0_macos_arm64.zip"
+      sha256 "b3007aa0d2ade57eeb21b7cec14ef71ac8adc5ce34221045aece68efd539ff34"
 
-      def install
+      define_method(:install) do
         bin.install "fq"
       end
     end
@@ -29,16 +29,16 @@ class Fq < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wader/fq/releases/download/v0.16.0/fq_0.16.0_linux_amd64.tar.gz"
-      sha256 "417602f095df0da0b451f294e65e958d461bc3152e6434762d182755b350be70"
-      def install
+      url "https://github.com/wader/fq/releases/download/v0.17.0/fq_0.17.0_linux_amd64.tar.gz"
+      sha256 "41c277c59dffacfba9c9f9f4ad3a75bef591d341e40b9ac89fc85acbdf645fee"
+      define_method(:install) do
         bin.install "fq"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wader/fq/releases/download/v0.16.0/fq_0.16.0_linux_arm64.tar.gz"
-      sha256 "d7d73fce62e0339f1344097a14a5fce7d5647fab31d3197fa903999ebc561ce7"
-      def install
+      url "https://github.com/wader/fq/releases/download/v0.17.0/fq_0.17.0_linux_arm64.tar.gz"
+      sha256 "217eba0d2cd03c8cbf9c54e45ecb9700b7100d592b71410ee3628c6d423cd328"
+      define_method(:install) do
         bin.install "fq"
       end
     end
