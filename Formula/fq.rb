@@ -5,21 +5,21 @@
 class Fq < Formula
   desc "jq for binary formats"
   homepage "https://github.com/wader/fq"
-  version "0.17.0"
+  version "0.18.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/wader/fq/releases/download/v0.17.0/fq_0.17.0_macos_amd64.zip"
-      sha256 "55221b37ad199005777f2e2b00528f2eb6f5cdb74e174a4230d24c6796d61ad8"
+      url "https://github.com/wader/fq/releases/download/v0.18.0/fq_0.18.0_macos_amd64.zip"
+      sha256 "743cd7527691cd7ab1bdb536b397d226e2775416771f17594075540acd2c017c"
 
       define_method(:install) do
         bin.install "fq"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/wader/fq/releases/download/v0.17.0/fq_0.17.0_macos_arm64.zip"
-      sha256 "b3007aa0d2ade57eeb21b7cec14ef71ac8adc5ce34221045aece68efd539ff34"
+      url "https://github.com/wader/fq/releases/download/v0.18.0/fq_0.18.0_macos_arm64.zip"
+      sha256 "93fc660e455d2f4a64a82555b0b9406fd7bc177a5f9fe3cd638d03e883078cdd"
 
       define_method(:install) do
         bin.install "fq"
@@ -29,15 +29,15 @@ class Fq < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wader/fq/releases/download/v0.17.0/fq_0.17.0_linux_amd64.tar.gz"
-      sha256 "41c277c59dffacfba9c9f9f4ad3a75bef591d341e40b9ac89fc85acbdf645fee"
+      url "https://github.com/wader/fq/releases/download/v0.18.0/fq_0.18.0_linux_amd64.tar.gz"
+      sha256 "07d9407c0cde116f6d9244b5d477a4570c917fef33d6e77c46ed58a38bf5e2b3"
       define_method(:install) do
         bin.install "fq"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wader/fq/releases/download/v0.17.0/fq_0.17.0_linux_arm64.tar.gz"
-      sha256 "217eba0d2cd03c8cbf9c54e45ecb9700b7100d592b71410ee3628c6d423cd328"
+      url "https://github.com/wader/fq/releases/download/v0.18.0/fq_0.18.0_linux_arm64.tar.gz"
+      sha256 "761f857a583c404646701272baa3e7b67ffa961bafd7e325fec184990eeb024f"
       define_method(:install) do
         bin.install "fq"
       end
