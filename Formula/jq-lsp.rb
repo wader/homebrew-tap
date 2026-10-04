@@ -5,21 +5,21 @@
 class JqLsp < Formula
   desc "jq language server"
   homepage "https://github.com/wader/jq-lsp"
-  version "0.1.18"
+  version "0.1.19"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/wader/jq-lsp/releases/download/v0.1.18/jq-lsp_0.1.18_macos_amd64.zip"
-      sha256 "ca523e407c336151fc04fed899ecebe672da50b869744d6b9b736c502b1fcc12"
+      url "https://github.com/wader/jq-lsp/releases/download/v0.1.19/jq-lsp_0.1.19_macos_amd64.zip"
+      sha256 "4303756acdfdc719d1e5c34095ca30c56dd977ddef062e80b6ce1958421c6850"
 
       def install
         bin.install "jq-lsp"
       end
     end
     on_arm do
-      url "https://github.com/wader/jq-lsp/releases/download/v0.1.18/jq-lsp_0.1.18_macos_arm64.zip"
-      sha256 "00b24c1cd491761f09f63a993f21b82f1b083aae89895eebe1f250d09bccb620"
+      url "https://github.com/wader/jq-lsp/releases/download/v0.1.19/jq-lsp_0.1.19_macos_arm64.zip"
+      sha256 "ba1d6ff10fe1ab0511c27e4703bca701d650199f25f101ad94b64ab783a0ffa2"
 
       def install
         bin.install "jq-lsp"
@@ -30,8 +30,8 @@ class JqLsp < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/wader/jq-lsp/releases/download/v0.1.18/jq-lsp_0.1.18_linux_amd64.tar.gz"
-        sha256 "ab1303bccc8282e9fc5578444f984cc79fb8e8a63410969e9e9713c4421fdb1d"
+        url "https://github.com/wader/jq-lsp/releases/download/v0.1.19/jq-lsp_0.1.19_linux_amd64.tar.gz"
+        sha256 "4c1688fc1575d657488badaa644c7938dc90a9a637868c504b9d576193676f28"
 
         def install
           bin.install "jq-lsp"
@@ -40,8 +40,8 @@ class JqLsp < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/wader/jq-lsp/releases/download/v0.1.18/jq-lsp_0.1.18_linux_arm64.tar.gz"
-        sha256 "4907ab486a09ca1c6851d5241d6893cadf2894ef0ee562a0cd65f25760c1a253"
+        url "https://github.com/wader/jq-lsp/releases/download/v0.1.19/jq-lsp_0.1.19_linux_arm64.tar.gz"
+        sha256 "64637727d504c2ec9e856643dd9779632aac9d4eaf3c307da37fef8b59108359"
 
         def install
           bin.install "jq-lsp"
